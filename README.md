@@ -1,5 +1,3 @@
-# GESTIONE DISPOSITIVI
-
 ## Introduction
 La seguente applicazione consente di tenere attiva la tracciabilità dei device all'interno di un'azienda informatica sotto vari punti di vista: collocazione fisica corrente e 
 storico delle passate, assegnamento degli stessi a dipendenti o a gruppi di dipendenti, lavori eseguiti su di essi, rapporti con i diversi mittenti dei dispositivi.
@@ -16,9 +14,9 @@ L'applicazione ha più livelli di permessi a seconda del tipo di utente che eseg
 
 ## Launch 
 
-1. Scaricare il progetto dalla branch MASTER ed importarlo su Eclipse.
-2. Controllare che si scarichino le varie dependecy.
-2. Avviare xampp ed il server Tomcat
+1. Scaricare il progetto dall branch MAIN ed importarlo su un IDE.
+2. Scaricare le dependecy facendo Maven update.
+2. Avviare Xampp ed il server Tomcat
 3. Modificare nelle classi di configurazione (DataServiceConfigWeb, DataServiceConfig, DataServiceConfigTest) la password per l'accesso ed eventualmente username e numero di porta
 4. Effettuare il run della classe LoadData come java application
 5. Runnare l'intero progetto sul server Tomcat

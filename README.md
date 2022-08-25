@@ -1,7 +1,7 @@
 ## Introduction
 La seguente applicazione consente di tenere attiva la tracciabilità dei device all'interno di un'azienda informatica sotto vari punti di vista: collocazione fisica corrente e 
 storico delle passate, assegnamento degli stessi a dipendenti o a gruppi di dipendenti, lavori eseguiti su di essi, rapporti con i diversi mittenti dei dispositivi.
-L'applicazione ha più livelli di permessi a seconda del tipo di utente che esegua il log in.
+L'applicazione ha più livelli di permessi a seconda del tipo di utente che esegue il login.
 
 ## Technologies
 

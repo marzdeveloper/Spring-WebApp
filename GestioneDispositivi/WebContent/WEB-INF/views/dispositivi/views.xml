@@ -1,0 +1,16 @@
+<?xml  version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache  Software
+   Foundation//DTD Tiles  Configuration 3.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition extends="default" name="dispositivi/list">
+   <put-attribute name="body" value="/WEB-INF/views/dispositivi/list.jsp" />
+  </definition>
+  <definition extends="none" name="dispositivi/modal">
+   <put-attribute name="body" value="/WEB-INF/views/dispositivi/modal.jsp" />
+</definition>
+  <definition extends="none" name="dispositivi/modal_new">
+  	<put-attribute name="body" value="/WEB-INF/views/dispositivi/modal_new.jsp"></put-attribute></definition>
+  <definition extends="none" name="dispositivi/modal_edit">
+  	<put-attribute name="body" value="/WEB-INF/views/dispositivi/modal_edit.jsp"></put-attribute></definition>
+</tiles-definitions>

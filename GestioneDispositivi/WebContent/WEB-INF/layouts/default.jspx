@@ -1,0 +1,65 @@
+<html xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:sec="http://www.springframework.org/security/tags">
+<jsp:output doctype-root-element="HTML"
+	doctype-system="about:legacy-compat" />
+<jsp:directive.page contentType="text/html;charset=UTF-8" />
+<jsp:directive.page pageEncoding="UTF-8" />
+
+<sec:authorize access="isAuthenticated()" var="isAuth" />
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<title>${title}</title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous" />
+	
+	<!-- CSS Local -->
+	<c:if test="${isAuth}">
+	<spring:url value="/css/global.css" var="global_css_url" />
+	<link href="${global_css_url}" rel="stylesheet" />
+	</c:if>
+	
+	<c:if test="${not empty app_css}">
+		<spring:url value="/css/${app_css}" var="app_css_url" />
+		<link rel="stylesheet" type="text/css" media="screen" href="${app_css_url}" />
+	</c:if>
+	
+	<c:if test="${isAuth}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
+	</c:if>
+	
+	<!-- DataTable -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+</head>
+<body>
+	<div id="headerBlock">
+		<tiles:insertAttribute name="header" ignore="false" />
+	</div>
+	<div class="wrapper">
+		<c:if test="${isAuth}">
+			<div id="menuBlock">
+				<tiles:insertAttribute name="menu" ignore="false" />
+			</div>
+		</c:if>
+		<div id="content">			
+			<div id="mainBlock">
+				<c:if test="${isAuth}"> <tiles:insertAttribute name="hmenu" /> </c:if>
+				<tiles:insertAttribute name="body" />
+				<div class="msg_alert" role="alert"></div>
+			</div>
+		</div>
+	</div>
+	<div id="footerBlock">
+		<tiles:insertAttribute name="footer" ignore="true" />
+	</div>
+</body>
+</html>

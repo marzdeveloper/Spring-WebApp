@@ -1,0 +1,16 @@
+<?xml  version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache  Software
+   Foundation//DTD Tiles  Configuration 3.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition extends="default" name="employee/list">
+   <put-attribute name="body" value="/WEB-INF/views/employee/list.jsp" />
+  </definition>
+    <definition extends="none" name="employee/modal">
+   <put-attribute name="body" value="/WEB-INF/views/employee/modal.jsp" />
+</definition>
+    <definition extends="none" name="employee/modal_new">
+    	<put-attribute name="body" value="/WEB-INF/views/employee/modal_new.jsp"></put-attribute></definition>
+    <definition extends="none" name="employee/modal_edit">
+    	<put-attribute name="body" value="/WEB-INF/views/employee/modal_edit.jsp"></put-attribute></definition>
+</tiles-definitions>
